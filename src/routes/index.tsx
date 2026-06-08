@@ -72,13 +72,14 @@ function SilkBg({ className = "" }: { className?: string }) {
       aria-hidden
       className={`absolute inset-0 -z-10 ${className}`}
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.7)), url(${silkBg})`,
+        backgroundImage: `linear-gradient(180deg, rgba(245,250,242,0.15), rgba(245,250,242,0.25)), url(${silkBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     />
   );
 }
+
 
 function SectionLabel({ icon: Icon, children }: { icon: React.ElementType; children: React.ReactNode }) {
   return (
