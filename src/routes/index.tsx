@@ -70,15 +70,17 @@ function SilkBg({ className = "" }: { className?: string }) {
   return (
     <div
       aria-hidden
-      className={`absolute inset-0 -z-10 ${className}`}
+      className={`pointer-events-none absolute inset-0 ${className}`}
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(245,250,242,0.15), rgba(245,250,242,0.25)), url(${silkBg})`,
+        backgroundImage: `linear-gradient(180deg, rgba(220,235,215,0.45), rgba(210,228,205,0.55)), url(${silkBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundBlendMode: "multiply",
       }}
     />
   );
 }
+
 
 
 function SectionLabel({ icon: Icon, children }: { icon: React.ElementType; children: React.ReactNode }) {
