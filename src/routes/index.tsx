@@ -66,20 +66,12 @@ const faqs = [
   { q: "How often should I groom my pet?", a: "Most breeds benefit from professional grooming every 4 to 8 weeks. We're happy to recommend a schedule based on your pet's coat type and lifestyle." },
 ];
 
-function SilkBg({ className = "" }: { className?: string }) {
-  return (
-    <div
-      aria-hidden
-      className={`pointer-events-none absolute inset-0 ${className}`}
-      style={{
-        backgroundImage: `linear-gradient(180deg, rgba(220,235,215,0.45), rgba(210,228,205,0.55)), url(${silkBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundBlendMode: "multiply",
-      }}
-    />
-  );
-}
+const silkSectionStyle = {
+  backgroundImage: `linear-gradient(180deg, rgba(220,235,215,0.45), rgba(210,228,205,0.55)), url(${silkBg})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundBlendMode: "multiply",
+} as const;
 
 
 
@@ -191,8 +183,7 @@ function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative overflow-hidden py-24">
-        <SilkBg />
+      <section id="about" className="py-24" style={silkSectionStyle}>
         <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2">
           <div>
             <SectionLabel icon={Heart}>About Us</SectionLabel>
@@ -250,8 +241,7 @@ function Index() {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="relative overflow-hidden py-24">
-        <SilkBg />
+      <section className="py-24" style={silkSectionStyle}>
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel icon={Heart}>How We Work</SectionLabel>
@@ -277,8 +267,7 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="relative overflow-hidden py-24">
-        <SilkBg />
+      <section id="services" className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel icon={Sparkles}>À la Carte Services</SectionLabel>
@@ -318,8 +307,7 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="relative overflow-hidden py-24">
-        <SilkBg />
+      <section className="py-24" style={silkSectionStyle}>
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel icon={Heart}>Testimonials</SectionLabel>
@@ -400,8 +388,7 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative overflow-hidden py-24">
-        <SilkBg />
+      <section id="contact" className="py-24" style={silkSectionStyle}>
         <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
           <div>
             <SectionLabel icon={Heart}>Contact Us</SectionLabel>
