@@ -70,7 +70,7 @@ function SilkBg({ className = "" }: { className?: string }) {
   return (
     <div
       aria-hidden
-      className={`pointer-events-none absolute inset-0 ${className}`}
+      className={`pointer-events-none absolute inset-0 z-0 ${className}`}
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(220,235,215,0.45), rgba(210,228,205,0.55)), url(${silkBg})`,
         backgroundSize: "cover",
@@ -191,9 +191,9 @@ function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative overflow-hidden py-24">
+      <section id="about" className="relative isolate overflow-hidden py-24">
         <SilkBg />
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2">
           <div>
             <SectionLabel icon={Heart}>About Us</SectionLabel>
             <h2 className="mt-5 text-balance text-4xl font-bold leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">
@@ -250,9 +250,9 @@ function Index() {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative isolate overflow-hidden py-24">
         <SilkBg />
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel icon={Heart}>How We Work</SectionLabel>
             <h2 className="mt-5 text-balance text-4xl font-bold leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">
@@ -277,8 +277,7 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="relative overflow-hidden py-24">
-        <SilkBg />
+      <section id="services" className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel icon={Sparkles}>À la Carte Services</SectionLabel>
@@ -318,9 +317,9 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative isolate overflow-hidden py-24">
         <SilkBg />
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <SectionLabel icon={Heart}>Testimonials</SectionLabel>
             <h2 className="mt-5 text-balance text-4xl font-bold leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">
@@ -400,9 +399,9 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative overflow-hidden py-24">
+      <section id="contact" className="relative isolate overflow-hidden py-24">
         <SilkBg />
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
           <div>
             <SectionLabel icon={Heart}>Contact Us</SectionLabel>
             <h2 className="mt-5 text-balance text-4xl font-bold leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">
