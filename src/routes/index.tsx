@@ -67,10 +67,9 @@ const faqs = [
 ];
 
 const silkSectionStyle = {
-  backgroundImage: `linear-gradient(180deg, rgba(232,242,228,0.86), rgba(224,237,219,0.88)), url(${silkBg})`,
+  backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.6)), url(${silkBg})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
-  backgroundBlendMode: "soft-light",
 } as const;
 
 
